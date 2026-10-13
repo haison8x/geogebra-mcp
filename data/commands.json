@@ -1,0 +1,322 @@
+[
+ {
+  "name": "AffineRatio",
+  "syntax": "AffineRatio( <Point A>, <Point B>, <Point C> )",
+  "description": "Returns the affine ratio λ of three collinear points A , B and C , where C = A + λ * AB ."
+ },
+ {
+  "name": "Angle",
+  "syntax": "Angle( <Vector>, <Vector> )",
+  "description": "Returns the angle of twist of a conic section’s major axis (see command Axes )."
+ },
+ {
+  "name": "AngleBisector",
+  "syntax": "AngleBisector( <Line>, <Line> )",
+  "description": "Returns both angle bisectors of the lines."
+ },
+ {
+  "name": "Arc",
+  "syntax": "Arc( <Circle>, <Point M >, <Point N> )",
+  "description": "Returns the directed arc (counterclockwise) of the given circle, with endpoints M and N."
+ },
+ {
+  "name": "Area",
+  "syntax": "Area( <Point>, …​, <Point> )",
+  "description": "Calculates the area of the polygon defined by the given points."
+ },
+ {
+  "name": "AreCollinear",
+  "syntax": "AreCollinear( <Point>, <Point>, <Point> )",
+  "description": "Decides if the points are collinear."
+ },
+ {
+  "name": "AreConcurrent",
+  "syntax": "AreConcurrent( <Line>, <Line>, <Line> )",
+  "description": "Decides if the lines are concurrent."
+ },
+ {
+  "name": "AreConcyclic",
+  "syntax": "AreConcyclic( <Point>, <Point>, <Point>, <Point> )",
+  "description": "Decides if the points are concyclic."
+ },
+ {
+  "name": "AreCongruent",
+  "syntax": "AreCongruent( <Object>, <Object> )",
+  "description": "Decides if the objects are congruent."
+ },
+ {
+  "name": "AreEqual",
+  "syntax": "AreEqual( <Object>, <Object> )",
+  "description": "Decides if the objects are equal."
+ },
+ {
+  "name": "AreParallel",
+  "syntax": "AreParallel( <Line>, <Line> )",
+  "description": "Decides if the lines are parallel."
+ },
+ {
+  "name": "ArePerpendicular",
+  "syntax": "ArePerpendicular( <Line>, <Line> )",
+  "description": "Decides if the lines are perpendicular."
+ },
+ {
+  "name": "Barycenter",
+  "syntax": "Barycenter( <List of Points>, <List of Weights> )",
+  "description": "This command differs among variants of English:"
+ },
+ {
+  "name": "Centroid",
+  "syntax": "Centroid( <Polygon> )",
+  "description": "Returns the centroid of the polygon."
+ },
+ {
+  "name": "Circle",
+  "syntax": "Circle( <Point>, <Radius Number> )",
+  "description": "Yields a circle with given center and radius."
+ },
+ {
+  "name": "CircularArc",
+  "syntax": "CircularArc( <Midpoint>, <Point A>, <Point B> )",
+  "description": "Creates a circular arc with midpoint between the two points."
+ },
+ {
+  "name": "CircularSector",
+  "syntax": "CircularSector( <Midpoint>, <Point A>, <Point B> )",
+  "description": "Creates a circular sector with midpoint between the two points."
+ },
+ {
+  "name": "CircumcircularArc",
+  "syntax": "CircumcircularArc( <Point>, <Point>, <Point> )",
+  "description": "Creates a circular arc through three points, where the first point is the starting point and the third point is the e…"
+ },
+ {
+  "name": "CircumcircularSector",
+  "syntax": "CircumcircularSector( <Point>, <Point>, <Point> )",
+  "description": "Creates a circular sector whose arc runs through the three points, where the first point is the starting point and th…"
+ },
+ {
+  "name": "Circumference",
+  "syntax": "Circumference(Conic)",
+  "description": "If the given conic is a circle or ellipse, this command returns its circumference."
+ },
+ {
+  "name": "ClosestPoint",
+  "syntax": "ClosestPoint( <Path>, <Point> )",
+  "description": "Returns a new point on a path which is the closest to a selected point."
+ },
+ {
+  "name": "ClosestPointRegion",
+  "syntax": "ClosestPointRegion( <Region>, <Point> )",
+  "description": "Returns a new point on the region which is the closest to a selected point."
+ },
+ {
+  "name": "CrossRatio",
+  "syntax": "CrossRatio( <Point A>, <Point B>, <Point C>, <Point D> )",
+  "description": "Calculates the cross ratio λ of four collinear points A , B , C and D , where: λ = AffineRatio[B, C, D ] / AffineRati…"
+ },
+ {
+  "name": "Cubic",
+  "syntax": "Cubic( <Point>, <Point>, <Point>, <Number> )",
+  "description": "Gives n -th triangle cubic of the given triangle ABC ."
+ },
+ {
+  "name": "Difference",
+  "syntax": "Difference( <Polygon>, <Polygon> )",
+  "description": "Finds the difference of the two polygons."
+ },
+ {
+  "name": "Direction",
+  "syntax": "Direction( <Line> )",
+  "description": "Yields the direction vector of the line."
+ },
+ {
+  "name": "Distance",
+  "syntax": "Distance( <Point>, <Object> )",
+  "description": "Yields the shortest distance between a point and an object."
+ },
+ {
+  "name": "Envelope",
+  "syntax": "Envelope( <Path>, <Point> )",
+  "description": "Creates the envelope equation of a set of output paths while the moving point is bound to another object."
+ },
+ {
+  "name": "Incircle",
+  "syntax": "Incircle( <Point>, <Point>, <Point> )",
+  "description": "Returns Incircle of the triangle formed by the three Points."
+ },
+ {
+  "name": "InteriorAngles",
+  "syntax": "InteriorAngles( <Polygon> )",
+  "description": "Creates all the interior angles of the given polygon."
+ },
+ {
+  "name": "Intersect",
+  "syntax": "Intersect( <Object>, <Object> )",
+  "description": "Yields the intersection points of two objects."
+ },
+ {
+  "name": "IntersectPath",
+  "syntax": "IntersectPath( <Line>, <Polygon> )",
+  "description": "Creates the intersection path between line and polygon."
+ },
+ {
+  "name": "IsInRegion",
+  "syntax": "IsInRegion( <Point>, <Region> )",
+  "description": "Returns true if the point is in given region and false otherwise."
+ },
+ {
+  "name": "IsTangent",
+  "syntax": "IsTangent( <Line>, <Conic> )",
+  "description": "Decides if the line is tangent to the conic."
+ },
+ {
+  "name": "Length",
+  "syntax": "Length( <Object> )",
+  "description": "Yields the length of the object."
+ },
+ {
+  "name": "Line",
+  "syntax": "Line( <Point>, <Point> )",
+  "description": "Creates a line through two points A and B ."
+ },
+ {
+  "name": "Locus",
+  "syntax": "Locus( <Point Creating Locus Line Q>, <Point P>)",
+  "description": "Returns the locus curve of the point Q , which depends on the point P ."
+ },
+ {
+  "name": "LocusEquation",
+  "syntax": "LocusEquation( <Locus> )",
+  "description": "Calculates the equation of a Locus and plots this as an Implicit Curve."
+ },
+ {
+  "name": "Midpoint",
+  "syntax": "Midpoint( <Segment> )",
+  "description": "Returns the midpoint of the segment."
+ },
+ {
+  "name": "PathParameter",
+  "syntax": "PathParameter( <Point On Path> )",
+  "description": "Returns the parameter (i.e."
+ },
+ {
+  "name": "Perimeter",
+  "syntax": "Perimeter( <Polygon> )",
+  "description": "Returns the perimeter of the polygon."
+ },
+ {
+  "name": "PerpendicularBisector",
+  "syntax": "PerpendicularBisector( <Segment> )",
+  "description": "Yields the perpendicular bisector of a segment."
+ },
+ {
+  "name": "PerpendicularLine",
+  "syntax": "PerpendicularLine( <Point>, <Line> )",
+  "description": "Creates a line through the point perpendicular to the given line."
+ },
+ {
+  "name": "Point",
+  "syntax": "Point( <Object> )",
+  "description": "Returns a point on the geometric object."
+ },
+ {
+  "name": "PointIn",
+  "syntax": "PointIn( <Region> )",
+  "description": "Returns a point restricted to given region ."
+ },
+ {
+  "name": "Polygon",
+  "syntax": "Polygon( <Point>, …​, <Point> )",
+  "description": "Returns a polygon defined by the given points."
+ },
+ {
+  "name": "Polyline",
+  "syntax": "Polyline( <List of Points> )",
+  "description": "Creates an open polygonal chain (i.e."
+ },
+ {
+  "name": "Prove",
+  "syntax": "Prove( <Boolean Expression> )",
+  "description": "Returns whether the given boolean expression is true or false in general."
+ },
+ {
+  "name": "ProveDetails",
+  "syntax": "ProveDetails( <Boolean Expression> )",
+  "description": "Returns some details of the result of the automated proof."
+ },
+ {
+  "name": "Radius",
+  "syntax": "Radius( <Conic> )",
+  "description": "Returns the radius of a conic."
+ },
+ {
+  "name": "RandomPointIn",
+  "syntax": "RandomPointIn( <Region> )",
+  "description": "Creates a random point inside a given polygon or closed conic."
+ },
+ {
+  "name": "Ray",
+  "syntax": "Ray( <Start Point>, <Point> )",
+  "description": "Creates a ray starting at a point through a point."
+ },
+ {
+  "name": "RigidPolygon",
+  "syntax": "RigidPolygon( <Polygon> )",
+  "description": "Creates a copy of any polygon that can only be translated by dragging its first vertex and rotated by dragging its se…"
+ },
+ {
+  "name": "Sector",
+  "syntax": "Sector( <Conic>, <Point>, <Point> )",
+  "description": "Yields a conic sector between two points on the conic section and calculates its area."
+ },
+ {
+  "name": "Segment",
+  "syntax": "Segment( <Point>, <Point> )",
+  "description": "This command differs among variants of English:"
+ },
+ {
+  "name": "Semicircle",
+  "syntax": "Semicircle( <Point>, <Point> )",
+  "description": "Creates a semicircle above the segment between the two points and displays its length in Algebra View ."
+ },
+ {
+  "name": "Slope",
+  "syntax": "Slope( <Line> )",
+  "description": "Returns the slope of the given line."
+ },
+ {
+  "name": "Tangent",
+  "syntax": "Tangent( <Point>, <Conic> )",
+  "description": "Creates (all) tangents through the point to the conic section."
+ },
+ {
+  "name": "TriangleCenter",
+  "syntax": "TriangleCenter( <Point>, <Point>, <Point>, <Number> )",
+  "description": "This command differs among variants of English:"
+ },
+ {
+  "name": "TriangleCurve",
+  "syntax": "TriangleCurve( <Point P>, <Point Q>, <Point R>, <Equation in A, B, C> )",
+  "description": "Creates implicit polynomial, whose equation in barycentric coordinates with respect to points P , Q , R is given by t…"
+ },
+ {
+  "name": "Trilinear",
+  "syntax": "Trilinear( <Point>, <Point>, <Point>, <Number>, <Number>, <Number> )",
+  "description": "creates a point whose trilinear coordinates are the given numbers with respect to triangle with given points."
+ },
+ {
+  "name": "Union",
+  "syntax": "Union( <List>, <List> )",
+  "description": "Joins the two lists and removes elements that appear multiple times."
+ },
+ {
+  "name": "Type",
+  "syntax": "Type( <Object> )",
+  "description": "For conics and quadrics this command returns a number representing the conic/quadric type according to the table below."
+ },
+ {
+  "name": "Vertex",
+  "syntax": "Vertex( <Conic> )",
+  "description": "Returns (all) vertices of the conic section."
+ }
+]
