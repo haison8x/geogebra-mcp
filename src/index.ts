@@ -2,6 +2,7 @@
 // geogebra-mcp — an MCP server (stdio) that lets an AI draw and edit geometry on a live
 // GeoGebra Calculator window, driven through Playwright.
 // stdout carries the MCP protocol: log to stderr only.
+import { readFileSync } from 'node:fs';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
@@ -9,10 +10,11 @@ import { CATALOG_TEXT, RULES, SERVER_INSTRUCTIONS, drawProblemPrompt } from './r
 import { GeoGebraSession, loadConfig } from './session.js';
 import { registerTools } from './tools.js';
 
+const { version } = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')) as { version: string };
 const session = new GeoGebraSession(loadConfig());
 
 const server = new McpServer(
-  { name: 'geogebra-mcp', version: '0.1.0' },
+  { name: 'geogebra-mcp', version },
   { instructions: SERVER_INSTRUCTIONS },
 );
 
