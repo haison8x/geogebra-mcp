@@ -1,0 +1,10 @@
+{
+  "name": "geogebra-mcp",
+  "version": "0.1.0",
+  "description": "Draw and edit plane-geometry figures live on GeoGebra Calculator: run commands, inspect state, verify properties, take screenshots.",
+  "author": { "name": "haison8x" },
+  "homepage": "https://github.com/haison8x/geogebra-mcp",
+  "repository": "https://github.com/haison8x/geogebra-mcp",
+  "license": "MIT",
+  "keywords": ["geogebra", "geometry", "math", "mcp"]
+}

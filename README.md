@@ -40,33 +40,47 @@ Also: resource `geogebra://rules` (construction rules), resource `geogebra://com
 
 Requirements: Node.js ≥ 20 and Google Chrome or Microsoft Edge (otherwise run `npx playwright install chromium`).
 
-```bash
-npm install
-npm run build
-```
-
-### Claude Code
+### Claude Code (plugin)
 
 ```bash
-claude mcp add geogebra -- node C:/Data/Son/geogebra-mcp/dist/index.js
+claude plugin marketplace add haison8x/geogebra-mcp
+claude plugin install geogebra-mcp@geogebra-tools
 ```
 
-### Claude Desktop
+The server then shows up in `/mcp` as `plugin:geogebra-mcp:geogebra`. Update later with `claude plugin update geogebra-mcp@geogebra-tools`.
 
-Edit `claude_desktop_config.json` (Settings → Developer → Edit Config):
+### Claude Code (without the plugin)
+
+```bash
+claude mcp add geogebra -- npx -y geogebra-mcp
+```
+
+### Claude Desktop, Cursor and other MCP clients
+
+Edit `claude_desktop_config.json` (Settings → Developer → Edit Config), or your client's MCP config:
 
 ```json
 {
   "mcpServers": {
     "geogebra": {
-      "command": "node",
-      "args": ["C:/Data/Son/geogebra-mcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "geogebra-mcp"]
     }
   }
 }
 ```
 
-Then restart Claude Desktop and ask, for example: *"Vẽ tam giác ABC nội tiếp đường tròn (O), đường cao AH, M là trung điểm BC."*
+Then restart the client and ask, for example: *"Vẽ tam giác ABC nội tiếp đường tròn (O), đường cao AH, M là trung điểm BC."*
+
+### From source
+
+```bash
+git clone https://github.com/haison8x/geogebra-mcp.git
+cd geogebra-mcp
+npm install
+npm run build
+claude mcp add geogebra -- node /path/to/geogebra-mcp/dist/index.js
+```
 
 ### Configuration (environment variables)
 
@@ -78,6 +92,8 @@ Then restart Claude Desktop and ask, for example: *"Vẽ tam giác ABC nội ti�
 | `GGB_URL` | `https://www.geogebra.org/calculator` | Page to open |
 
 ## Development
+
+Releasing: bump `version` in `package.json`, `.claude-plugin/plugin.json` and the pinned version in `.mcp.json`, then `npm publish` and push.
 
 ```bash
 npm run build

@@ -1,0 +1,17 @@
+{
+  "name": "geogebra-tools",
+  "owner": {
+    "name": "haison8x"
+  },
+  "metadata": {
+    "description": "Claude plugins for drawing and checking geometry in GeoGebra.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "geogebra-mcp",
+      "source": "./",
+      "description": "Draw and edit plane-geometry figures live on GeoGebra Calculator."
+    }
+  ]
+}

@@ -2,20 +2,38 @@
   "name": "geogebra-mcp",
   "version": "0.1.0",
   "description": "MCP server that lets an AI draw and edit geometry directly on GeoGebra Calculator (geogebra.org/calculator) through Playwright",
+  "keywords": [
+    "mcp",
+    "geogebra",
+    "geometry",
+    "claude",
+    "playwright"
+  ],
+  "author": "haison8x",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haison8x/geogebra-mcp.git"
+  },
+  "homepage": "https://github.com/haison8x/geogebra-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/haison8x/geogebra-mcp/issues"
+  },
   "type": "module",
   "bin": {
     "geogebra-mcp": "dist/index.js"
   },
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist/*.js",
+    "data"
   ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
   },
   "engines": {
     "node": ">=20"
