@@ -2,7 +2,7 @@
   "mcpServers": {
     "geogebra": {
       "command": "npx",
-      "args": ["-y", "geogebra-mcp@0.1.0"]
+      "args": ["-y", "geogebra-mcp@0.1.1"]
     }
   }
 }

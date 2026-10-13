@@ -1,0 +1,48 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.haison8x/geogebra-mcp",
+  "description": "Draw and edit plane-geometry figures live on GeoGebra Calculator, with checks and screenshots.",
+  "repository": {
+    "url": "https://github.com/haison8x/geogebra-mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "geogebra-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "GGB_BROWSER",
+          "description": "Browser channel: chrome or msedge (default: try chrome, msedge, then Playwright Chromium)",
+          "isRequired": false,
+          "format": "string"
+        },
+        {
+          "name": "GGB_HEADLESS",
+          "description": "Set to 1 to run without a visible window",
+          "isRequired": false,
+          "format": "string",
+          "default": "0"
+        },
+        {
+          "name": "GGB_PROFILE_DIR",
+          "description": "Browser profile directory (default: ~/.geogebra-mcp/profile)",
+          "isRequired": false,
+          "format": "string"
+        },
+        {
+          "name": "GGB_URL",
+          "description": "Page to open",
+          "isRequired": false,
+          "format": "string",
+          "default": "https://www.geogebra.org/calculator"
+        }
+      ]
+    }
+  ]
+}

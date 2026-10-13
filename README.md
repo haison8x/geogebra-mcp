@@ -4,6 +4,8 @@ An MCP server that lets an AI (Claude Desktop, Claude Code, Cursor, …) draw an
 
 Unlike the copy/paste workflow of the GeoGebra AutoDraw AI extension, the AI here works in a loop: it runs commands, reads errors and the figure state, verifies properties, looks at a screenshot, and fixes the figure itself — and it can edit the figure on request ("H must be the foot from A").
 
+![Demo: the AI builds triangle ABC inscribed in (O) with altitude AH and median AM, then A is dragged and the figure follows](https://raw.githubusercontent.com/haison8x/geogebra-mcp/master/docs/demo.gif)
+
 ## How it works
 
 ```

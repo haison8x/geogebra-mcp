@@ -1,6 +1,7 @@
 {
   "name": "geogebra-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.haison8x/geogebra-mcp",
   "description": "MCP server that lets an AI draw and edit geometry directly on GeoGebra Calculator (geogebra.org/calculator) through Playwright",
   "keywords": [
     "mcp",
