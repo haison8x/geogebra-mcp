@@ -95,7 +95,7 @@ claude mcp add geogebra -- node /path/to/geogebra-mcp/dist/index.js
 
 ## Development
 
-Releasing: bump `version` in `package.json`, `.claude-plugin/plugin.json` and the pinned version in `.mcp.json`, then `npm publish` and push.
+Releasing: bump the version in `package.json`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `server.json` (both `version` fields) and the pinned version in `.mcp.json`. Then push, `npm publish`, `mcp-publisher publish`, and create a GitHub release.
 
 ```bash
 npm run build
